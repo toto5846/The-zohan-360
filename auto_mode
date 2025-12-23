@@ -109,7 +109,7 @@ class AutoMode:
         try:
             if self.gun_initialized:
                 print("Face detected - moving gun up 1300 degrees")
-                self.gun_motor.goto_degrees(1300, kp=5, ki=0.2, kd=0, timeout=10)
+                self.gun_motor.goto_degrees(1500, kp=2, ki=0, kd=0, timeout=10)
                 print("Gun in firing position")
         except Exception as e:
             print(f"Error in gun sequence: {e}")
@@ -124,7 +124,7 @@ class AutoMode:
 
             print("Face tracking stopped - resetting gun to button position")
             # Large smooth move to approximate button
-            self.gun_motor.goto_degrees(-200, kp=5, ki=0.2, kd=0, timeout=10)
+            self.gun_motor.goto_degrees(-200, kp=2, ki=0, kd=0, timeout=10)
 
             # Fine-tune: just move down slowly until button pressed
             while not self.gun_button.is_pressed and self.running:
