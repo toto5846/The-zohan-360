@@ -15,7 +15,7 @@ from auto_mode import AutoMode  # <-- our new library
 # Initialize LCD and driver
 lcd = CharLCD('PCF8574', 0x27)
 lcd.clear()
-driver = DualDCMotorDriver(in1_pin=27, in2_pin=17, in3_pin=24, in4_pin=23)
+driver = DualDCMotorDriver(in1_pin=13, in2_pin=19, in3_pin=00, in4_pin=26)
 
 manual = manual_mode.ManualMode(driver, lcd)
 
