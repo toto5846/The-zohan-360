@@ -24,8 +24,8 @@ class AutoMode:
         self.max_speed = 100
 
         # Gun motor parameters
-        self.gun_button = Button(21)
-        self.gun_motor = EV3Motor(25, 8, 26, 20)
+        self.gun_button = Button(4)
+        self.gun_motor = EV3Motor(8, 25, 22, 10)
         self.gun_motor.reset_encoder()
         self.gun_initialized = False
         self.gun_active = False
