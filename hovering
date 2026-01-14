@@ -96,7 +96,7 @@ class HoveringController:
         self.last_time = now
 
         # Integrate gyro angle (same axis and offset as before)
-        gz = (gyro.robust_read(gyro.GYRO_XOUT_H + 4) / 131.0) - self.offset_z
+        gz = (gyro.robust_read(gyro.GYRO_XOUT_H + 4) / 71.5) - self.offset_z
         self.angle_z += gz * dt
 
         if self.state == "turn":
